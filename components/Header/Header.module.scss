@@ -1,0 +1,86 @@
+@import '../../styles/variables/all.scss';
+
+.header {  
+  background-color: $header-color;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0px 15px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.pagesLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("../../public/svg/logo.svg");
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.logo:hover {
+  filter: invert(6%) sepia(68%) saturate(700%) hue-rotate(311deg) brightness(101%) contrast(103%);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  max-width: 1140px;
+}
+
+.link {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  transition: .3s;
+}
+
+.linkActive {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  color: #FFDA93;
+  text-decoration: none;
+  padding: 20px;
+  transition: .3s;
+}
+
+.link:hover {
+  color: #ffe5b3;
+}
+
+.langSwitchContainer {
+  height: 36px;
+}
+
+@media (max-width: 470px) {  
+  .container {
+    padding: 0;
+  }
+  .link {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,154 @@
+@import '../../styles/variables/all.scss';
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 32px;
+  margin: 20px auto;
+  background-color: $block-color;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.hr {
+  margin-bottom: 40px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 130px;
+  height: 590px;
+  margin-left: 10px;
+}
+
+.pageItem {  
+  width: 130px;
+  height: 88px;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+}
+
+.pageLink {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, $body-color 32px, transparent 32px);  
+}
+
+.pageLinkActive {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  background-image: linear-gradient(to top, $body-color 32px, transparent 32px);
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.25),inset 0 1px 0px rgba(255,255,255,.6), 0 1px 1px rgba(0,0,0,.1),inset 0 0 17px rgba(0,0,0,.1), inset 0 -1px 0px rgba(255,255,255,.5), 0 -1px 1px rgba(0,0,0,.1),inset 0 0 17px rgba(0,0,0,.1);
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 970px) {  
+  .sliderContainer {
+    flex-direction: column;
+  }
+  .pagination {
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@media (max-width: 970px) {  
+  .sliderContainer {
+    flex-direction: column;
+  }
+  .pagination {
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@media (max-width: 890px) {  
+  .pagination {
+    border-radius: 5px; 
+    overflow: hidden;
+  }
+  .pageItem {
+    flex: auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+  }  
+  .pageLink {
+    display: block;
+    padding: 8px 12px;
+    color: $white;
+    background: $green-color;
+    border-color: $dark-green-color;
+    border-radius: 0;    
+    background-image: none;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      background-color: $medium-green-color;
+    }
+  }  
+  .pageLinkActive {
+    display: block;
+    padding: 8px 12px;
+    color: $white;
+    background: $medium-green-color;
+    border-color: $dark-green-color;
+    box-shadow: none;
+    border-radius: 0;
+    background-image: none;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      background: $light-green-color;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .title {
+    font-size: 32px;    
+  }
+}

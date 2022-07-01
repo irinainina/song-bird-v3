@@ -1,0 +1,92 @@
+@import '../../styles/variables/all.scss';
+
+.container {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1140px;
+  min-height: calc(100vh - 50px);
+  padding: 0 15px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  height: 220px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.subTitle {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  padding: 12px 45px;
+  font-size: $font-size-l;
+  font-family: $font-roboto;
+  color: $white;
+  background-color: $medium-green-color;
+  border-color: $dark-green-color;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+    background-color: $light-green-color;
+    border-color: $medium-green-color;
+  }
+}
+
+.btn:nth-child(1) {
+  margin-right: 20px;
+}
+
+.video {
+  position: absolute;
+  right: -40px;
+  transform: rotateY(180deg);
+  width: 720px;
+  height: 792px;
+  max-height: calc(100vh - 60px);
+}
+
+@media (max-width: 570px) {
+  .container {
+    justify-content: center;
+  }
+  .title {
+    font-size: 44px;
+    letter-spacing: 0;
+  }  
+  .subTitle {
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+  .video {
+    right: -150px;
+    max-width: 150%;
+    max-height: 150%;
+  }
+}

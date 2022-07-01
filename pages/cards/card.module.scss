@@ -1,0 +1,53 @@
+@import '../../styles/variables/all.scss';
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btn {
+  display: block;
+  margin: 25px 0;
+  background-color: $block-color;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  color: $white;
+  text-align: center;
+  line-height: 35px;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.btnActive {
+  display: block;
+  margin: 25px 0;
+  background-color: $medium-green-color;
+  border: 1px solid $green-color;
+  border-radius: 5px;
+  color: $white;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  pointer-events: auto;
+  &:hover {
+    background-color: $light-green-color;
+    border-color: $medium-green-color;
+  }
+}
+
+@media (max-width: 768px) {  
+  .wrap {
+    flex-direction: column;
+  }
+   .wrap .birdImage {
+    margin: 0 auto 25px;
+  } 
+}
